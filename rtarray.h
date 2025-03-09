@@ -13,10 +13,10 @@
 //    void*   contents (the contents)
 
 enum {
-    SL_ATT_LENGTH,
-    SL_ATT_SEGMENT_SIZE,
+    RA_LENGTH,
+    RA_SEGMENT_SIZE,
 
-    SL_ATT_HEADER_LENGTH
+    RA_HEADER_LENGTH
 };
 
 
@@ -30,7 +30,7 @@ void rtArray_free(void* arr);
 
 
 #define rtArray_new(size, type) __rtArray_create_new(size, sizeof(type))
-#define rtArray_size(arr) __rtArray_get_header_val(arr, SL_ATT_LENGTH)
+#define rtArray_size(arr) __rtArray_get_header_val(arr, RA_LENGTH)
 
 
 #endif // rtArray_C_H
