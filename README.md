@@ -1,6 +1,8 @@
 # Runtime Array
 A lightweight fixed length array for C which stores length and can be initialised at runtime.
 
+I made it so that you can make new arrays during runtime that know their length.
+
 ## Usage
 
 Step 1 - Include the package
@@ -13,7 +15,7 @@ Step 2 - Initialise new array
 int* intArr = rtArray_new(10, int);
 
 // another example
-int* charArr = rtArray_new(10, char);
+char* charArr = rtArray_new(10, char);
 ```
 
 Step 3 - Use array
@@ -70,6 +72,18 @@ int main() {
 
 
 ## Info
+It stores the header information before the list and then returns a pointer to teh begining of the list.
+
+```
+// layout
++---+---+------+------+------+
+| 1 | 2 |         3          |
++---+---+------+------+------+
+// 1 - length
+// 2 - segment size
+// 3 - begining of regular pointer list
+```
+
 Header size is only 16 bytes
 
 Maximum list size is 18,446,744,073,709,551,616 items (very big)
