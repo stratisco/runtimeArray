@@ -3,6 +3,8 @@ A lightweight fixed length array for C which stores length and can be initialise
 
 I made it so that you can make new arrays during runtime that know their length.
 
+*made for versions of c where there VLA is not enabled*
+
 ## Usage
 
 Step 1 - Include the package
