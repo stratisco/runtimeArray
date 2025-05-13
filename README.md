@@ -38,7 +38,8 @@ Step 4 - Free array (delete)
 rtArray_free(arr);
 ```
 
-Demo
+
+Example
 ```c
 #include "rtarray.h"
 
