@@ -1,19 +1,24 @@
 # Runtime Array
-A lightweight fixed length array for C which stores length and can be initialised at runtime.
+A lightweight fixed length array for C which stores length and can be initialised at runtime
 
-I made it so that you can make new arrays during runtime that know their length.
+## Features
+- Allows for initialisation at runtime
+- Has normal malloc array features and isnt a struct
+- Stores the length of the array
+- Function can check if specific index is within array range
 
-*made for versions of c where there VLA is not enabled like c89*
+> [!NOTE]
+> This is made as a replacement for VLA *(Variable Length Arrays)* in version of c where those are not yet supported *(like c89)*
 
 ## Usage
-Step 1 - Download the two files in `/src` to your project
+**Step 1** - Download the files [`/src/rtarray.c`](src/rtarray.c) and [`/src/rtarray.h`](src/rtarray.h) to your project
 
-Step 2 - Include the package
+**Step 2** - Include the package
 ```c
 #include "rtarray.h"
 ```
 
-Step 3 - Initialise new array 
+**Step 3** - Initialise new array 
 ```c
 int* intArr = rtArray_new(10, int);
 
@@ -21,7 +26,7 @@ int* intArr = rtArray_new(10, int);
 char* charArr = rtArray_new(10, char);
 ```
 
-Step 4 - Use array
+**Step 4** - Use array
 ```c
 // get length of an array
 size_t size = rtArray_size(arr);
@@ -34,7 +39,7 @@ _Bool valid = rtArray_index_exists(array, index);
 
 ```
 
-Step 5 - Free array
+**Step 5** - Free array
 ```c
 rtArray_free(arr);
 ```
@@ -79,13 +84,13 @@ int main() {
 It stores the header information before the list and then returns a pointer to the begining of the list.
 
 ```
-// layout
+// Memory layout
 +---+---+------+------+------+
 | 1 | 2 |         3          |
 +---+---+------+------+------+
-// 1 - length
-// 2 - segment size
-// 3 - begining of regular pointer list
+// 1 - length (size_t) 
+// 2 - segment size (size_t)
+// 3 - begining of regular pointer list (void *)
 ```
 
-Header size is only 16 bytes and the list max size is limated only by your computer max malloc size
+Header size is only 16 bytes and the list max size is limited only by your computer max malloc size
