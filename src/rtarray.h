@@ -29,8 +29,8 @@ size_t rtArray_memSize(void* arr);
 void rtArray_free(void* arr);
 
 
-#define rtArray_new(size, type) __rtArray_create_new(size, sizeof(type))
-#define rtArray_size(arr) __rtArray_get_header_val(arr, RA_LENGTH)
+#define rtArray_new(size, type) __rtArray_create_new((size), sizeof(type))
+#define rtArray_size(arr) __rtArray_get_header_val((arr), RA_LENGTH)
 
 
 #endif // rtArray_C_H
