@@ -6,13 +6,14 @@ I made it so that you can make new arrays during runtime that know their length.
 *made for versions of c where there VLA is not enabled like c89*
 
 ## Usage
+Step 1 - Download the two files in `/src` to your project
 
-Step 1 - Include the package
+Step 2 - Include the package
 ```c
 #include "rtarray.h"
 ```
 
-Step 2 - Initialise new array 
+Step 3 - Initialise new array 
 ```c
 int* intArr = rtArray_new(10, int);
 
@@ -20,7 +21,7 @@ int* intArr = rtArray_new(10, int);
 char* charArr = rtArray_new(10, char);
 ```
 
-Step 3 - Use array
+Step 4 - Use array
 ```c
 // get length of an array
 size_t size = rtArray_size(arr);
@@ -33,7 +34,7 @@ _Bool valid = rtArray_index_exists(array, index);
 
 ```
 
-Step 4 - Free array (delete)
+Step 5 - Free array
 ```c
 rtArray_free(arr);
 ```
