@@ -76,7 +76,7 @@ int main() {
 
 
 ## Info
-It stores the header information before the list and then returns a pointer to teh begining of the list.
+It stores the header information before the list and then returns a pointer to the begining of the list.
 
 ```
 // layout
@@ -88,7 +88,4 @@ It stores the header information before the list and then returns a pointer to t
 // 3 - begining of regular pointer list
 ```
 
-Header size is only 16 bytes
-
-Maximum list size is 18,446,744,073,709,551,616 items (very big)
-maximum item memory size is 18,446,744,073,709,551,616 bytes (also very big)
+Header size is only 16 bytes and the list max size is limated only by your computer max malloc size
