@@ -70,7 +70,7 @@ int main() {
     printf("10-item size: %zu byte(s)\n", rtArray_memSize(arr));
 
 
-    // free the memory used by array (delete it)
+    // free the array
     rtArray_free(arr);
 
 
