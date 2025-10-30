@@ -10,7 +10,7 @@ A lightweight fixed length array for C which stores length and can be initialise
 > [!NOTE]
 > This is made as a replacement for VLA *(Variable Length Arrays)* in version of c where those are not yet supported *(like c89)*
 
-## Usage
+## Setup & Usage
 **Step 1** - Download the files [`/src/rtarray.c`](src/rtarray.c) and [`/src/rtarray.h`](src/rtarray.h) to your project
 
 **Step 2** - Include the package
